@@ -17,9 +17,13 @@
     color: $font-item-color1;
 
     border-radius: 2.5vh;
-    transition: opacity 0.2s, right 0.2s;
+    transition: opacity 0.5s, right 0.5s;
     z-index: 2;
 
     margin: 0;
-    padding: 0 5vh;
+    padding: 0;
+
+    li {
+        margin-left: 5vh;
+    }
 }
