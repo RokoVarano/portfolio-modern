@@ -10,12 +10,12 @@ const PhoneMenu = () => {
 
     useEffect(()=>{
         if (menu) {
-            appear(menuRef);
             showfromLeft(menuRef);
+            appear(menuRef);            
         };
         if (!menu) {
-            disappear(menuRef);
             hideInLeft(menuRef);
+            disappear(menuRef);
         };
     }, [menu])
 
