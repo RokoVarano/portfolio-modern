@@ -1,5 +1,8 @@
 @import '../styles/variables.scss';
 
+$bg-color: $bg-item-color1;
+$font-color: $font-item-color1;
+
 .navphonebutton {
     position: absolute;
     display: flex;
@@ -12,8 +15,8 @@
     width: 5vh;
     border-radius: 50%;
 
-    background: $bg-item-color1;
-    color: $font-item-color1;
+    background: $bg-color;
+    color: $font-color;
 
     .buttonIcon {
         font-size: 5vh;
