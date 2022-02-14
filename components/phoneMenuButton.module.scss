@@ -4,7 +4,7 @@ $bg-color: $bg-item-color1;
 $font-color: $font-item-color1;
 
 .navphonebutton {
-    position: absolute;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +17,7 @@ $font-color: $font-item-color1;
 
     background: $bg-color;
     color: $font-color;
+    z-index: 999;
 
     .buttonIcon {
         font-size: 5vh;

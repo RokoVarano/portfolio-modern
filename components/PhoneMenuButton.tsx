@@ -1,25 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import cssClass from './navphone.module.scss';
+import cssClass from './phoneMenuButton.module.scss';
 import { RootState } from '../redux/configuratestore';
 import UISlice from '../redux/UISlice';
 
 type Props = {}
 
-function NavPhone({}: Props) {
+function PhoneMenuButton({}: Props) {
   const { toggleMenu } = UISlice.actions;
   const iconRef = useRef<HTMLElement>(null);
   const dispatch = useDispatch();
   const menu = useSelector((state: RootState) => state.ui.menu)
 
   const openMenu = () => {
-    console.log("openbutton");
-    iconRef.current.classList.add(cssClass.open);
+    iconRef.current?.classList.add(cssClass.open);
   }
 
   const closeMenu = () => {
-    console.log("closebutton");
-    iconRef.current.classList.remove(cssClass.open);
+    iconRef.current?.classList.remove(cssClass.open);
   }
 
   useEffect(()=>{
@@ -34,4 +32,4 @@ function NavPhone({}: Props) {
   )
 }
 
-export default NavPhone
+export default PhoneMenuButton

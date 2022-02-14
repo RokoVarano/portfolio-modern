@@ -1,0 +1,18 @@
+@import '../styles/variables.scss';
+
+.blurry {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    height: 100vh;
+
+    background-color: $bg-color1;
+    backdrop-filter: 10px;
+    backdrop-filter: opacity(20%);
+    z-index: 1;
+
+    transition: opacity 0.2s;
+}

@@ -1,9 +1,13 @@
 import type { NextPage } from 'next'
-import NavPhone from '../components/NavPhone'
+import BlurryBG from '../components/BlurryBG'
+import PhoneMenuButton from '../components/PhoneMenuButton'
 
 const Home: NextPage = () => {
   return (
-    <NavPhone/>
+    <div className="indexcontainer">
+      <PhoneMenuButton/>
+      <BlurryBG/>
+    </div>
   )
 }
 
