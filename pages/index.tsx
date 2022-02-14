@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import BlurryBG from '../components/BlurryBG'
+import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
 
 const Home: NextPage = () => {
@@ -7,6 +8,7 @@ const Home: NextPage = () => {
     <div className="indexcontainer">
       <PhoneMenuButton/>
       <BlurryBG/>
+      <PhoneMenu/>
     </div>
   )
 }

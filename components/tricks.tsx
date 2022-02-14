@@ -13,3 +13,11 @@ export const disappear = (ref: React.RefObject<HTMLElement>) => {
         ref.current?.classList.remove(cssClass.dissapear)
     }, 200);
 }
+
+export const hideInLeft = (ref: React.RefObject<HTMLElement>) => {
+    ref.current?.classList.remove(cssClass.hideinleft)
+}
+
+export const showfromLeft = (ref: React.RefObject<HTMLElement>) => {
+    ref.current?.classList.add(cssClass.hideinleft)
+}

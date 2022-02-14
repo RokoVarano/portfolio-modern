@@ -1,0 +1,24 @@
+@import '../styles/variables.scss';
+
+.phonemenu {
+    background-color: $bg-item-color1;
+    color: $font-item-color1;
+    list-style: none;
+
+    position: absolute;
+    
+    top: 15vh;
+    left: 5vh;
+    right: 5vh;
+    bottom: 5vh;
+
+    background-color: $bg-item-color1;
+    color: $font-item-color1;
+
+    border-radius: 2.5vh;
+    transition: opacity 0.2s, right 0.2s;
+    z-index: 2;
+
+    margin: 0;
+    padding: 0 5vh;
+}
