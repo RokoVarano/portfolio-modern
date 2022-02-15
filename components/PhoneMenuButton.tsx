@@ -8,7 +8,7 @@ type Props = {}
 
 function PhoneMenuButton({}: Props) {
   const { toggleMenu } = UISlice.actions;
-  const iconRef = useRef<HTMLElement>(null);
+  const iconRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const menu = useSelector((state: RootState) => state.ui.menu)
 
@@ -27,8 +27,8 @@ function PhoneMenuButton({}: Props) {
   }, [menu])
 
   return (
-    <div id="phonenavbutton" className={cssClass.navphonebutton} onClick={() => dispatch(toggleMenu())}>
-        <i className={`${cssClass.buttonIcon} fas fa-caret-down`} ref={iconRef}></i>
+    <div id="phonenavbutton" className={cssClass.navphonebutton} ref={iconRef} onClick={() => dispatch(toggleMenu())}>
+        <i className={`${cssClass.buttonIcon} fas fa-caret-down`} ></i>
     </div>
   )
 }
