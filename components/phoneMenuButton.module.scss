@@ -18,13 +18,15 @@ $font-color: $font-item-color1;
     background: $bg-color;
     color: $font-color;
     z-index: 999;
+    transition: transform 0.2s;
+    opacity: 0.5;
 
     .buttonIcon {
         font-size: 5vh;
-        transition: transform 0.2s;
     }
+}
 
-    .open {
-        transform: rotate(-180deg);
-    }
+.open {
+    transform: rotate(-180deg);
+    opacity: 1;
 }
