@@ -16,11 +16,11 @@ const Home: NextPage = () => {
       <BlurryBG/>
       <PhoneMenu/>
       <div className="indexcontainer">
-        <Section bgColor={colors.salmon}><></></Section>
-        <Section bgColor={colors.teal}><></></Section>
-        <Section bgColor={colors.salmon}><></></Section>
-        <Section bgColor={colors.teal}><></></Section>
-        <Section bgColor={colors.salmon}><></></Section>
+        <Section id="aboutMe" bgColor={colors.salmon}><></></Section>
+        <Section id="projects" bgColor={colors.teal}><></></Section>
+        <Section id="certifications" bgColor={colors.salmon}><></></Section>
+        <Section id="contactMe" bgColor={colors.teal}><></></Section>
+        <Section id="resume" bgColor={colors.salmon}><></></Section>
       </div>
     </div>
   )
