@@ -1,0 +1,32 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import './variables.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: $font-color1;
+  font-size: 3vh;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5f4ed2dd5cafe83e1ab75516/7-zorro-rojo-en-el-bosque.jpg');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.indexcontainer {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}

@@ -1,0 +1,30 @@
+@import '../styles/variables.scss';
+
+$bg-color: $bg-item-color1;
+$font-color: $font-item-color1;
+
+.navphonebutton {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5vh;
+    left: 5vh;
+
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+
+    background: $bg-color;
+    color: $font-color;
+    z-index: 999;
+
+    .buttonIcon {
+        font-size: 5vh;
+        transition: transform 0.2s;
+    }
+
+    .open {
+        transform: rotate(-180deg);
+    }
+}
