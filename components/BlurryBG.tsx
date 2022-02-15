@@ -9,8 +9,8 @@ const BlurryBG = () => {
     const menu = useSelector((state: RootState) => state.ui.menu)
 
     useEffect(() => {
-        if (menu) appear(blurryRef);
-        if (!menu) disappear(blurryRef);
+        if (!menu) appear(blurryRef);
+        if (menu) disappear(blurryRef);
     }, [menu])
 
     return (

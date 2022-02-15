@@ -9,11 +9,11 @@ const PhoneMenu = () => {
     const menuRef = useRef<HTMLUListElement>(null);
 
     useEffect(()=>{
-        if (menu) {
+        if (!menu) {
             showfromLeft(menuRef);
             appear(menuRef);            
         };
-        if (!menu) {
+        if (menu) {
             hideInLeft(menuRef);
             disappear(menuRef);
         };

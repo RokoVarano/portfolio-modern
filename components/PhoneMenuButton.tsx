@@ -21,6 +21,7 @@ function PhoneMenuButton({}: Props) {
   }
 
   useEffect(()=>{
+    console.log("Menu", menu)
     if (menu) openMenu();
     if (!menu) closeMenu();
   }, [menu])
