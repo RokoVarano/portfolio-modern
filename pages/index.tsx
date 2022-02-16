@@ -1,13 +1,14 @@
 import type { GetStaticProps, NextPage, InferGetStaticPropsType } from 'next'
 import AboutMe from '../components/AboutMe'
 import BlurryBG from '../components/BlurryBG'
+import Certificates from '../components/Certificates'
 import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
 import Projects from '../components/Projects'
 import Section from '../components/Section'
 import Toy from '../components/Toy'
 
-const Home: NextPage = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const colors = {
     salmon: 'rgba(250, 128, 114, 1)',
     teal: 'rgba(0, 128, 128, 1)',
@@ -31,7 +32,10 @@ const Home: NextPage = ({ projects }: InferGetStaticPropsType<typeof getStaticPr
           <Projects color={colors.teal} data={projects[0]}/>
           <Projects color={colors.salmon} data={projects[1]} left/>
         </Section>
-        <Section id="certifications"><></></Section>
+        <Section id="certifications">
+          <div style={{height: '10vh'}}>{' '}</div>
+          <Certificates data={certificates[0]}/>
+        </Section>
         <Section id="contactMe"><></></Section>
         <Section id="resume"><></></Section>
       </div>
@@ -56,6 +60,15 @@ const mockData = {
         tryit: 'https://rokovarano.github.io/Assessment/',
         github: 'https://github.com/RokoVarano/Assessment/tree/develop',
       }
+    ],
+    certificates: [
+      {
+        logo: 'https://assets-global.website-files.com/5dbb30f00775d4c32191a4df/5e18a9053ee8b2c791075c74_smalllogo.png',
+        color: 'rgb(111, 54, 255)',
+        title: 'Microverse',
+        description: 'HTML/CSS, JavaScript, React/Redux, Ruby, Ruby on Rails',
+        link: 'https://www.credential.net/profile/rodrigoandresibacetajimenez188513/wallet',
+      }
     ]
   }
 }
@@ -67,7 +80,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      projects: data.projects
+      projects: data.projects,
+      certificates: data.certificates
     }
   }
 }
