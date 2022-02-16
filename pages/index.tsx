@@ -21,12 +21,9 @@ const Home: NextPage = ({ projects }: InferGetStaticPropsType<typeof getStaticPr
       <BlurryBG/>
       <PhoneMenu/>
       <div className="indexcontainer">
-        <Toy fallTime={10} fallDistance={144} size={5} iconClass='fas fa-star' left={80} wait={0} color={colors.orange} opacity={1}/>
-        <Toy fallTime={12} fallDistance={189} size={5} iconClass='fas fa-star' left={68} wait={0} color={colors.orange} opacity={1}/>
-        <Toy fallTime={20} fallDistance={220} size={5} iconClass='fas fa-star' left={30} wait={1} color={colors.orange} opacity={0.5}/>
-        <Toy fallTime={30} fallDistance={320} size={15} iconClass='fas fa-star' left={40} wait={2} color={colors.teal} opacity={0.5}/>
-        <Toy fallTime={40} fallDistance={420} size={5} iconClass='fas fa-star' left={50} wait={3} color={colors.orange} opacity={0.5}/>
-        <Toy fallTime={10} fallDistance={35} size={10} iconClass='fas fa-star' left={40} wait={4} color={colors.teal} opacity={0.5}/>
+        <Toy fallTime={5} fallDistance={144} size={5} iconClass='fas fa-star' left={80} wait={2} color={colors.orange} opacity={1}/>
+        <Toy fallTime={7} fallDistance={189} size={5} iconClass='fas fa-star' left={68} wait={1} color={colors.orange} opacity={1}/>
+        <Toy fallTime={3} fallDistance={35} size={10} iconClass='fas fa-star' left={40} wait={0} color={colors.teal} opacity={0.5}/>
 
         <Section id="aboutMe"><AboutMe/></Section>
         <Section id="projects">
