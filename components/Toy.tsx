@@ -9,6 +9,7 @@ type Props = {
   left: number,
   wait: number,
   color: string,
+  opacity: number,
 }
 
 const Toy = (props: Props) => {
@@ -26,8 +27,9 @@ const Toy = (props: Props) => {
       {
         fontSize: `${props.size}vh`,
         transition: `top ${props.fallTime}s`,
-        left: `${props.left}vh`,
-        color: props.color
+        left: `${props.left}%`,
+        color: props.color,
+        opacity: props.opacity,
       }
     } ref={toyRef}></i>
   )
