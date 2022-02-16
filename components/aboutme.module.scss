@@ -10,4 +10,13 @@
     align-items: center;
 
     margin: 0 5vh;
+    z-index: 1;
+
+    h1 {
+        color: $fourth-color
+    }
+
+    h3 {
+        color: $third-color;
+    }
 }

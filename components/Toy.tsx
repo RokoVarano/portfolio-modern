@@ -6,8 +6,9 @@ type Props = {
   fallDistance: number,
   size: number,
   iconClass: string,
-  left: number
-  wait: number
+  left: number,
+  wait: number,
+  color: string,
 }
 
 const Toy = (props: Props) => {
@@ -26,6 +27,7 @@ const Toy = (props: Props) => {
         fontSize: `${props.size}vh`,
         transition: `top ${props.fallTime}s`,
         left: `${props.left}vh`,
+        color: props.color
       }
     } ref={toyRef}></i>
   )
