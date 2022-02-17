@@ -26,7 +26,7 @@ const CV = () => {
                   </p>
                   <p style={{marginLeft: '2.5vh'}}>
                     <i className="fab fa-github"></i> https://github.com/RokoVarano<br/>
-                    <i className="fas fa-envelope"></i> rodrigo.ibaeta01@gmail.com
+                    <i className="fas fa-envelope"></i> rodrigo.ibaceta01@gmail.com
                   </p>
             </div>
             {sectionHeader('Summary')}
@@ -80,6 +80,7 @@ const CV = () => {
               <i className="fas fa-dog"></i> <b>Veterinarian:</b> Masters in Environment and Sustainable Development. Universidad Mayor, Chile <br/>
               <i className="fas fa-dragon"></i> <b>Hobbies:</b> Cooperative Storytelling, VideoGames, Nature
             </p>
+            <p style={{fontSize: '1.5vh', alignSelf: 'center', marginBottom: '0', color: "#0b81af"}}>This CV was created using <i className="fab fa-react"></i> React</p>
         </div>
     </div>
     <button onClick={handlePrint}>Print this out!</button>
