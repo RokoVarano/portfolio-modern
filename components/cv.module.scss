@@ -1,0 +1,54 @@
+$header-font: #0b81af;
+$header-bg: #bce3f3;
+$font-size: 1.5vh;
+
+.frame {
+    display: flex;
+    color: black;
+    margin: 2.5vh;
+    flex-direction: column;
+    font-size: $font-size;
+
+    p {
+        margin: 0;
+        margin-bottom: 2vh;
+        margin-left: 2vh;
+    }
+
+    .sectionheader {
+        background-color: $header-bg;
+        color: $header-font;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2vh;
+        padding: 1vh 2.5vh;
+    }
+
+    .header {
+        display: flex;
+        background-color: $header-bg;
+        width: 100%;
+        padding: 0 2.5vh;
+        font-size: $font-size * 1.5;
+        color: $header-font;
+        margin-bottom: 2.5vh;
+        flex-direction: column;
+
+        .title {
+            margin-top: 1vh ;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
+    }
+
+    .content {
+            width: 100%;
+            line-height: 2vh;
+    }
+    
+}
