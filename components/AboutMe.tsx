@@ -1,7 +1,8 @@
 import React from 'react'
 import cssClass from './aboutme.module.scss';
 
-type Props = {}
+type Props = {
+}
 
 const AboutMe = (props: Props) => {
   return (
