@@ -1,5 +1,7 @@
 import React from 'react'
 import cssClass from './projects.module.scss';
+import Toy from './Toy';
+import { colors, iconClasses } from './tricks';
 
 type Props = {
     color: string,
@@ -16,7 +18,9 @@ type Props = {
 const Projects = (props: Props) => {
   return (
     <div className={cssClass.folder} style={{alignSelf: props.left ? "flex-start" : "flex-end"}}>
-        <h6 className={cssClass.tag} style={{backgroundColor: props.color}}>{props.data.title}</h6>
+        <h6 className={cssClass.tag} style={{backgroundColor: props.color, display: 'flex', justifyContent: 'space-between'}}>
+            <Toy size={1.5} iconClass={iconClasses.star} opacity={1} color={colors.orange}/>
+            {props.data.title}</h6>
         <div className={cssClass.card} style={{backgroundColor: props.color}}>
             <div style={{backgroundImage: `url(${props.data.image})`}} className={cssClass.picture} >
             </div>

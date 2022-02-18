@@ -22,3 +22,14 @@ export const hideInLeft = (ref: React.RefObject<HTMLElement>) => {
 export const showfromLeft = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.classList.add(cssClass.hideinleft)
 }
+
+export const colors = {
+    salmon: 'rgba(250, 128, 114, 1)',
+    teal: 'rgba(0, 128, 128, 1)',
+    orange: 'rgba(252, 196, 76, 1)',
+    transparent: 'rgba(255, 255, 255, 1)'
+  }
+
+export const iconClasses = {
+    star: 'fas fa-star',
+}

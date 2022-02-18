@@ -8,26 +8,15 @@ import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
 import Projects from '../components/Projects'
 import Section from '../components/Section'
-import Toy from '../components/Toy'
+import { colors } from '../components/tricks'
 
 const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const colors = {
-    salmon: 'rgba(250, 128, 114, 1)',
-    teal: 'rgba(0, 128, 128, 1)',
-    orange: 'rgba(252, 196, 76, 1)',
-    transparent: 'rgba(255, 255, 255, 1)'
-  }
-
   return (
     <div style={{height: '100vh'}}>
       <PhoneMenuButton/>
       <BlurryBG/>
       <PhoneMenu/>
       <div className="indexcontainer">
-        <Toy fallTime={5} fallDistance={144} size={5} iconClass='fas fa-star' left={80} wait={2} color={colors.orange} opacity={1}/>
-        <Toy fallTime={7} fallDistance={189} size={5} iconClass='fas fa-star' left={68} wait={1} color={colors.orange} opacity={1}/>
-        <Toy fallTime={3} fallDistance={35} size={10} iconClass='fas fa-star' left={40} wait={0} color={colors.teal} opacity={0.5}/>
-
         <Section id="aboutMe"><AboutMe/></Section>
         <Section id="projects">
           <div style={{height: '10vh'}}>{' '}</div>
