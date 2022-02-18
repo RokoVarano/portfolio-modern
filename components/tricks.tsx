@@ -32,4 +32,8 @@ export const colors = {
 
 export const iconClasses = {
     star: 'fas fa-star',
+    js: "fab fa-js",
+    sass: "fab fa-sass",
+    html: "fab fa-html5",
+    css: "fab fa-css3-alt"
 }

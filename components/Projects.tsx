@@ -5,7 +5,6 @@ import { colors, iconClasses } from './tricks';
 
 type Props = {
     color: string,
-    left?: boolean,
     data: {
         title: string,
         image: string,
@@ -13,11 +12,15 @@ type Props = {
         tryit: string,
         github: string,
     }
+    tech?: Array<string>
 }
 
 const Projects = (props: Props) => {
+
+    const tech = () => props.tech?.map((iconString) => <i className={iconString} key={'tech'} style={{marginRight: '1vh'}}></i>)
+
   return (
-    <div className={cssClass.folder} style={{alignSelf: props.left ? "flex-start" : "flex-end"}}>
+    <div className={cssClass.folder}>
         <h6 className={cssClass.tag} style={{backgroundColor: props.color, display: 'flex', justifyContent: 'space-between'}}>
             <Toy size={1.5} iconClass={iconClasses.star} opacity={1} color={colors.orange}/>
             {props.data.title}</h6>
@@ -25,9 +28,14 @@ const Projects = (props: Props) => {
             <div style={{backgroundImage: `url(${props.data.image})`}} className={cssClass.picture} >
             </div>
             <p className={cssClass.description}>{props.data.description}</p>
-            <div className='links'>
-                <a href={props.data.tryit} target="_blank" rel="noreferrer" style={{marginRight: '1vh'}}><i className="fas fa-solid fa-play"></i></a>
-                <a href={props.data.github} target="_blank" rel="noreferrer"><i className="fas fa-solid fa-code"></i></a>
+            <div className={cssClass.icons}>
+                <div className={cssClass.icongroup}>
+                    {tech()}
+                </div>
+                <div className={cssClass.icongroup} style={{color: colors.orange}}>
+                    <a href={props.data.tryit} target="_blank" rel="noreferrer" style={{marginRight: '1vh'}}><i className="fas fa-solid fa-play"></i></a>
+                    <a href={props.data.github} target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
 import Projects from '../components/Projects'
 import Section from '../components/Section'
-import { colors } from '../components/tricks'
+import { colors, iconClasses } from '../components/tricks'
 
 const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -20,8 +20,8 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
         <Section id="aboutMe"><AboutMe/></Section>
         <Section id="projects">
           <div style={{height: '10vh'}}>{' '}</div>
-          <Projects color={colors.teal} data={projects[0]}/>
-          <Projects color={colors.salmon} data={projects[1]} left/>
+          <Projects color={colors.teal} data={projects[0]} tech={[iconClasses.js, iconClasses.sass]}/>
+          <Projects color={colors.salmon} data={projects[1]} tech={[iconClasses.html, iconClasses.css]}/>
         </Section>
         <Section id="certifications">
           <div style={{height: '10vh'}}>{' '}</div>
