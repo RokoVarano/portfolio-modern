@@ -1,0 +1,70 @@
+@import '../styles/variables.scss';
+
+.certificate {
+    width: 100%;
+    height: 40vh;
+    color: $font-item-color1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    position: relative;
+
+    padding: 2.5vh;
+
+    .check {
+        width: 5vh;
+        height: 5vh;
+        color: rgb(196, 44, 95);
+        font-size: 10vh;
+    
+        position: absolute;
+        bottom: 5vh;
+        right: 6vh;
+        animation: shake 1s infinite alternate linear;
+    }
+
+    .frame {
+        background-color: $bg-color1;
+        padding: 2.5vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            .picture {
+                background-position: center;
+                background-size: contain;
+                height: 10vh;
+                width: 10vh;
+            }
+
+            .title {
+                margin: 0;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .description {
+            display: flex;
+            font-size: 2.5vh;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+@keyframes shake {
+    0% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
