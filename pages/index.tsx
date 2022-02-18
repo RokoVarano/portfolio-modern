@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage, InferGetStaticPropsType } from 'next'
 import AboutMe from '../components/AboutMe'
 import BlurryBG from '../components/BlurryBG'
 import CV from '../components/CV'
+import CVes from '../components/CVes'
 import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
 import Projects from '../components/Projects'
@@ -34,7 +35,7 @@ const Home: NextPage = ({ projects }: InferGetStaticPropsType<typeof getStaticPr
         </Section>
         <Section id="certifications"><></></Section>
         <Section id="contactMe"><></></Section>
-        <Section id="resume"><CV/></Section>
+        <Section id="resume"><CV/><CVes/></Section>
       </div>
     </div>
   )
