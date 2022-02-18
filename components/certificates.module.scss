@@ -29,7 +29,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .header {
             display: flex;
@@ -38,13 +38,13 @@
             .picture {
                 background-position: center;
                 background-size: contain;
-                height: 10vh;
-                width: 10vh;
+                height: 7.5vh;
+                width: 7.5vh;
             }
 
             .title {
                 margin: 0;
-                height: 10vh;
+                height: 7.5vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
