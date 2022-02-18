@@ -29,7 +29,6 @@ const PhoneMenu = () => {
         <li><a href="#certifications" onClick={()=> dispatch(toggleMenu())}><h2>Certifications</h2></a></li>
         {/* Referrals */}
         <li><a href="#contactMe" onClick={()=> dispatch(toggleMenu())}><h2>Contact Me</h2></a></li>
-        <li><a href="#resume" onClick={()=> dispatch(toggleMenu())}><h2>Resume</h2></a></li>
     </ul>
   )
 }
