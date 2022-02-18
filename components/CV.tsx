@@ -83,7 +83,7 @@ const CV = () => {
             <p style={{fontSize: '1.5vh', alignSelf: 'center', marginBottom: '0', color: "#0b81af"}}>This CV was created using <i className="fab fa-react"></i> React</p>
         </div>
     </div>
-    <button onClick={handlePrint}>Print this out!</button>
+    <button onClick={handlePrint} className={cssClass.printbutton}><i className="fas fa-file-alt"></i> Resume in English</button>
     </>
   )
 }

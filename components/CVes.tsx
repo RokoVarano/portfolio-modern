@@ -67,6 +67,10 @@ const CVes = () => {
                 <b>Bootcamp Microverse</b>, Noviembre 2020, Diciembre 2021<br/>
                 <i className="fas fa-certificate"></i> <b>Certificados:</b> https://www.credential.net/profile/rodrigoandresibacetajimenez188513/wallet
               </p>
+              <p style={{marginLeft: '4vh'}}>
+                <i className="fas fa-code"></i> Bootcamp remoto para desarrollo de software usando React, Ruby on Rails, y otras tecnologías <br/>
+                <i className="fas fa-code"></i> Más de 1300 horas desarrollando proyectos en pareja o solo con personas de todo el mundo, con plazos semanales
+              </p>
             </div>
             {sectionHeader('Habilidades, Experiencia e Intereses adicionales')}
             <p>
@@ -77,7 +81,7 @@ const CVes = () => {
             <p style={{fontSize: '1.5vh', alignSelf: 'center', marginBottom: '0', color: "#0b81af"}}>Este CV fue creado usando <i className="fab fa-react"></i> React</p>
         </div>
     </div>
-    <button onClick={handlePrint}>Imprimir!</button>
+    <button onClick={handlePrint} className={cssClass.printbutton}><i className="fas fa-file-alt"></i> Curriculum en Español</button>
     </>
   )
 }

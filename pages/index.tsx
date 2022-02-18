@@ -35,7 +35,11 @@ const Home: NextPage = ({ projects }: InferGetStaticPropsType<typeof getStaticPr
         </Section>
         <Section id="certifications"><></></Section>
         <Section id="contactMe"><></></Section>
-        <Section id="resume"><CV/><CVes/></Section>
+        <Section id="resume">
+          <div style={{height: '10vh'}}>{' '}</div>
+          <CV/>
+          <CVes/>
+        </Section>
       </div>
     </div>
   )
