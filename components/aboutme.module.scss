@@ -19,4 +19,10 @@
         color: $third-color;
         text-align: justify;
     }
+
+    .star {
+        position: absolute;
+        left: 40%;
+        z-index: -1;
+    }
 }

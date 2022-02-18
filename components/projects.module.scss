@@ -42,8 +42,14 @@
             margin-bottom: 0;
         }
 
-        .links {
+        .icons {
             height: 20%;
+            display: flex;
+            justify-content: space-between;
+
+            .icongroup {
+                display: flex;
+            }
         }
     }
 }
