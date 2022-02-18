@@ -17,7 +17,7 @@ type Props = {
 
 const Projects = (props: Props) => {
 
-    const tech = () => props.tech?.map((iconString) => <i className={iconString} key={'tech'} style={{marginRight: '1vh'}}></i>)
+    const tech = () => props.tech?.map((iconString, index) => <i className={iconString} key={index} style={{marginRight: '1vh'}}></i>)
 
   return (
     <div className={cssClass.folder}>

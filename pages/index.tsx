@@ -9,6 +9,7 @@ import PhoneMenuButton from '../components/PhoneMenuButton'
 import Projects from '../components/Projects'
 import Section from '../components/Section'
 import { colors, iconClasses } from '../components/tricks'
+import ReactWhatsapp from 'react-whatsapp'
 
 const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -21,7 +22,7 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
         <Section id="projects">
           <div style={{height: '10vh'}}>{' '}</div>
           <Projects color={colors.teal} data={projects[0]} tech={[iconClasses.js, iconClasses.sass]}/>
-          <Projects color={colors.salmon} data={projects[1]} tech={[iconClasses.html, iconClasses.css]}/>
+          <Projects color={colors.teal} data={projects[1]} tech={[iconClasses.html, iconClasses.css]}/>
         </Section>
         <Section id="certifications">
           <div style={{height: '10vh'}}>{' '}</div>
@@ -29,6 +30,34 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
         </Section>
         <Section id="contactMe">
           <div style={{height: '10vh'}}>{' '}</div>
+            <ReactWhatsapp
+              number="56973445869"
+              message="Hello. I saw your Portfolio and I would like to talk to you"
+              element="div"
+            >
+              <div className='contactlink' style={{backgroundColor: colors.whatsapp}}>
+                <i className="fab fa-whatsapp" />
+                {' '}
+                +56973445869
+              </div>
+              <div className='contactlink' 
+                style={{border: `${colors.gmail} 1px solid`, color: colors.gmail, fontSize: '2vh'}}
+                onClick={() => window.open('mailto:rodrigo.ibaceta01@gmail.com')}
+              >
+                <i className="fas fa-envelope"></i>{' '}rodrigo.ibaceta01@gmail.com
+              </div>        
+              <div className="contactlink" style={{backgroundColor: colors.linkedin}}>
+                <a href='https://www.linkedin.com/in/rodrigo-ibaceta/' target="_blank" rel="noreferrer" >
+                  <i className="fab fa-linkedin-in"></i>{' '}Linkedin
+                </a>
+              </div>
+              <div className="contactlink" style={{backgroundColor: 'black'}}>
+                <a href='https://github.com/RokoVarano' target="_blank" rel="noreferrer" >
+                  <i className="fab fa-github"></i>{' '}Github
+                </a>
+              </div>
+              
+            </ReactWhatsapp>  
             <CV/>
             <CVes/>
         </Section>
