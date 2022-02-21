@@ -39,7 +39,8 @@ const CV = ({ es }: Props) => {
                 </p>
             <h4 className={cssClass.sectionheader}>{es ? `Experiencia` : `Experience`}</h4>
             <div style={{display: 'flex', flexDirection: 'column'}}>
-              <p><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b>, {es ? `Septiembre 2018, Septiembre 2020` : `September 2018, September 2020`}</p>
+              <p style={{marginBottom: `0.5vh`}}><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b></p>
+              <p style={{fontSize: `1.5vh`}}>EXE.cl, {es ? `Septiembre 2018, Septiembre 2020` : `September 2018, September 2020`}</p>
               <p style={{marginLeft: '4vh'}}>
                 <i className="fas fa-check"></i> {es ? `Ayudé a crear un gestor documental para organismos del gobierno usando Java y un framework de legado, Seam`: `Helped creating a document handler for government organisms using Java and a legacy framework`} <br/>
                 <i className="fas fa-check"></i> {es ? `Recopilé datos de entrenamiento para un software de reconocimiento de imagenes` : `Gathered training data for image recognition software`}<br/>
@@ -70,8 +71,9 @@ const CV = ({ es }: Props) => {
             <div className={cssClass.pagebreak}>
               <h4 className={cssClass.sectionheader}>{es ? `Educación`: `Education`}</h4>
               <div style={{display: 'flex', flexDirection: 'column'}}>
-                <p>
-                  <b>{es ? `Desarrollador Web Full-Stack.`: `Full-Stack Web Developer.`}</b> Microverse, {es ? `Noviembre 2020, Diciembre 2021` : `November 2020, December 2021`}
+                <p style={{marginBottom: `0.5vh`}}>
+                  <b>{es ? `Desarrollador Web Full-Stack.`: `Full-Stack Web Developer.`}</b></p>
+                  <p style={{fontSize: `1.5vh`}}>Microverse, {es ? `Noviembre 2020, Diciembre 2021` : `November 2020, December 2021`}
                 </p>
                 <p style={{marginLeft: '4vh'}}>
                 <i className="fas fa-code"></i> {es ? `Curso remoto de desarrollo de software usando React/Redux, Ruby on Rails, HTML, CSS/SASS, SQL, GIT.` : `Remote course for software development using React/redux, Ruby on Rails, HTML, CSS/SASS, SQL, GIT.`}<br/>
@@ -80,7 +82,8 @@ const CV = ({ es }: Props) => {
                 <i className="fas fa-certificate" style={{marginRight: `0.5vh`}}></i><a href="https://www.credential.net/profile/rodrigoandresibacetajimenez188513/wallet" target="_blank" rel="noreferrer"><b>{es ? `Certificados` : `Certificates`}</b></a>
                 </p>
             
-                <p><b>{es ? `Veterinario.`: `Veterinarian.`}</b> {es ? `Master en Medio Ambiente y Desarrollo Sustentable` : `Masters in Environment and Sustainable Development`}, 2016. Universidad Mayor, Chile </p>
+                <p style={{marginBottom: `0.5vh`}}><b>{es ? `Veterinario.`: `Veterinarian.`}</b></p>
+                <p style={{fontSize: `1.5vh`}}>{es ? `Master en Medio Ambiente y Desarrollo Sustentable` : `Masters in Environment and Sustainable Development`}, 2016. Universidad Mayor, Chile </p>
               </div>
             </div>
             <h4 className={cssClass.sectionheader}>{es ? `Otras habilidades e intereses` : `Other skills and Interests`}</h4>
