@@ -2,7 +2,6 @@ import type { GetStaticProps, NextPage, InferGetStaticPropsType } from 'next'
 import AboutMe from '../components/AboutMe'
 import BlurryBG from '../components/BlurryBG'
 import CV from '../components/CV'
-import CVes from '../components/CVes'
 import Certificates from '../components/Certificates'
 import PhoneMenu from '../components/PhoneMenu'
 import PhoneMenuButton from '../components/PhoneMenuButton'
@@ -40,6 +39,7 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
                 {' '}
                 +56973445869
               </div>
+            </ReactWhatsapp>  
               <div className='contactlink' 
                 style={{border: `${colors.gmail} 1px solid`, color: colors.gmail, fontSize: '2vh'}}
                 onClick={() => window.open('mailto:rodrigo.ibaceta01@gmail.com')}
@@ -56,11 +56,9 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
                   <i className="fab fa-github"></i>{' '}Github
                 </a>
               </div>
-              
-            </ReactWhatsapp>  
             <CV/>
-            <CVes/>
-        </Section>
+            <CV es/>
+          </Section>
       </div>
     </div>
   )

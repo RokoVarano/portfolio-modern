@@ -1,18 +1,26 @@
 $header-font: #0b81af;
+$link-font: rgb(211, 137, 0);
 $header-bg: #bce3f3;
-$font-size: 1.5vh;
+$font-size: 2vh;
 
 .frame {
-    display: flex;
     color: black;
     margin: 2.5vh;
-    flex-direction: column;
     font-size: $font-size;
+
+    i {
+        margin-right: 1vh;
+        width: 2vh;
+    }
 
     p {
         margin: 0;
         margin-bottom: 2vh;
         margin-left: 1.5vh;
+    }
+    
+    a {
+        color: $link-font;
     }
 
     .sectionheader {
@@ -21,8 +29,9 @@ $font-size: 1.5vh;
         display: flex;
         width: 100%;
         margin: 0;
-        margin-bottom: 1vh;
+        margin-bottom: 2.5vh;
         padding: 1vh 2.5vh;
+        font-size: $font-size * 1.5;
     }
 
     .header {
@@ -48,7 +57,7 @@ $font-size: 1.5vh;
 
     .content {
             width: 100%;
-            line-height: 2vh;
+            line-height: 2.5vh;
     }
     
 }
@@ -63,3 +72,10 @@ $font-size: 1.5vh;
     font-size: 2.5vh;
     width: 40vh;
 }
+
+@media print {
+    .pagebreak {
+        margin-top: 2.5vh;
+        page-break-before: always;
+    }
+  }

@@ -2,14 +2,16 @@ import React, { useRef } from 'react'
 import cssClass from './cv.module.scss';
 import { useReactToPrint } from 'react-to-print';
 
-const CV = () => {
+type Props = {
+  es?: boolean
+}
+
+const CV = ({ es }: Props) => {
     const resumeRef = useRef<HTMLDivElement>(null);
 
     const handlePrint = useReactToPrint({
       content: () => resumeRef.current
     });
-
-    const sectionHeader = (title: string) => <h3 className={cssClass.sectionheader}>{title}</h3> 
     
   return (
     <>
@@ -17,32 +19,35 @@ const CV = () => {
         <div className={cssClass.frame} ref={resumeRef}>
             <div className={cssClass.header}>
               <h2 className={cssClass.title}>Rodrigo Ibaceta</h2>
-              <h4 className={cssClass.subtitle}>FullStack Web Developer</h4>
+              <h4 className={cssClass.subtitle}>{ es ? `Desarrollador Web Full-Stack` : `FullStack Web Developer`}</h4>
             </div>
-            <div style={{display: 'flex', width: '100%'}}>
-                  <p>
-                    <i className="fas fa-phone"></i> +56973445869 <br/>
-                    <i className="fab fa-linkedin"></i> https://www.linkedin.com/in/rodrigo-ibaceta/
-                  </p>
-                  <p style={{marginLeft: '2.5vh'}}>
-                    <i className="fab fa-github"></i> https://github.com/RokoVarano<br/>
-                    <i className="fas fa-envelope"></i> rodrigo.ibaceta01@gmail.com
+            <div style={{display: 'flex', width: '100%', flexDirection: 'column'}}>
+                  <p style={{display: 'flex', justifyContent: "space-between"}}>
+                    <p><a href='https://www.linkedin.com/in/rodrigo-ibaceta/' target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i> LinkedIn</a></p>
+                    <p><i className="fas fa-phone"></i>{` +56973445869`}</p>
+                    <p><i className="fas fa-envelope"></i>{' rodrigo.ibaceta01@gmail.com'}</p>
                   </p>
             </div>
-            {sectionHeader('Summary')}
-            <p>Enhusiastic developer with 2 years of experience and a year of learning in the Microverse Bootcamp
-                Fluid use of React and Ruby on Rails to create web sites</p>
-            {sectionHeader('Experience')}
+            <h4 className={cssClass.sectionheader}>{es ? `Perfil` : `Profile`}</h4>
+            <p>{es ?
+              `Un desarrollador web entusiasta con 2.5 años de experiencia tanto en front-end como en back-end, usando React y Ruby on Rails,
+              pero tambien proficiente en Python y bases de datos Postgresql.
+              Conocedor de acquitectura MVC, desarrollo de APIs, acquitectura REST y testing.`
+              : `An enthusiastic web developer with 2.5 years of experience in both front-end and back-end, using React and Ruby on Rails,
+              but also proficient in Python and Postgresql databases.
+              Knowledgeable in MVC architecture, API development, REST architecture, and testing.`}<br/>
+                </p>
+            <h4 className={cssClass.sectionheader}>{es ? `Experiencia` : `Experience`}</h4>
             <div style={{display: 'flex', flexDirection: 'column'}}>
-              <p><b>Junior Software Developer</b>, September 2018, September 2020</p>
+              <p><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b>, {es ? `Septiembre 2018, Septiembre 2020` : `September 2018, September 2020`}</p>
               <p style={{marginLeft: '4vh'}}>
-                <i className="fas fa-check"></i> Helped creating a document handler for government organisms using Java and a legacy framework <br/>
-                <i className="fas fa-check"></i> Created training data for image recognition software <br/>
-                <i className="fas fa-check"></i> Developed a mobile turn-ticket app that fetched personal information from a government API <br/>
-                <i className="fas fa-check"></i> Participated in several company side-projects
+                <i className="fas fa-check"></i> {es ? `Ayudé a crear un gestor documental para organismos del gobierno usando Java y un framework de legado, Seam`: `Helped creating a document handler for government organisms using Java and a legacy framework`} <br/>
+                <i className="fas fa-check"></i> {es ? `Recopilé datos de entrenamiento para un software de reconocimiento de imagenes` : `Gathered training data for image recognition software`}<br/>
+                <i className="fas fa-check"></i> {es ? `Desarrollé una aplicación mobil de tickets de turno que consumia datos de una API del gobierno` : `Developed a mobile turn-ticket app that fetched personal information from a government API`}<br/>
+                <i className="fas fa-check"></i> {es ? `Participé en proyectos laterales de la compañia` : `Participated in several company side-projects`}
               </p>
             </div>
-            {sectionHeader('Languages and Frameworks')}
+            <h4 className={cssClass.sectionheader}>{es ? `Lenguajes y FrameWorks` : `Languages and Frameworks`}</h4>
             <div className={cssClass.skillTable}>
               <div style={{display: 'flex'}}>
                 <p className={cssClass.content}>
@@ -57,33 +62,36 @@ const CV = () => {
                 </p>
                 <p className={cssClass.content}>
                   <i className="fab fa-html5"></i> HTML <br/>
-                  <i className="fab fa-css3-alt"></i> CSS <br/>
+                  <i className="fab fa-css3-alt"></i> CSS/SASS <br/>
                   <i className="fab fa-git"></i> GIT
                 </p>
               </div>
             </div>
-            {sectionHeader('Education')}
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-              <p>
-                <b>Microverse Bootcamp</b>, November 2020, December 2021<br/>
-                <i className="fas fa-certificate"></i> <b>Certificates:</b> https://www.credential.net/profile/rodrigoandresibacetajimenez188513/wallet
-              </p>
-              <p style={{marginLeft: '4vh'}}>
-              <i className="fas fa-code"></i> Remote bootcamp for software development using React, Ruby on Rails, and other technologies <br/>
-              <i className="fas fa-code"></i> More than 1300 hours developing projects in pairs and alone from countires all over the world, with
-                weekly deadlines
-              </p>
+            <div className={cssClass.pagebreak}>
+              <h4 className={cssClass.sectionheader}>{es ? `Educación`: `Education`}</h4>
+              <div style={{display: 'flex', flexDirection: 'column'}}>
+                <p>
+                  <b>{es ? `Desarrollador Web Full-Stack.`: `Full-Stack Web Developer.`}</b> Microverse, {es ? `Noviembre 2020, Diciembre 2021` : `November 2020, December 2021`}
+                </p>
+                <p style={{marginLeft: '4vh'}}>
+                <i className="fas fa-code"></i> {es ? `Curso remoto de desarrollo de software usando React/Redux, Ruby on Rails, HTML, CSS/SASS, SQL, GIT.` : `Remote course for software development using React/redux, Ruby on Rails, HTML, CSS/SASS, SQL, GIT.`}<br/>
+                <i className="fas fa-code"></i> {es ? `Más de 1300 horas desarrollando proyectos en parejas y solo con personas de todo el mundo, con plazos semanales`:`More than 1300 hours developing projects in pairs and alone from countires all over the world, with
+                  weekly deadlines`} <br/>
+                <i className="fas fa-certificate" style={{marginRight: `0.5vh`}}></i><a href="https://www.credential.net/profile/rodrigoandresibacetajimenez188513/wallet" target="_blank" rel="noreferrer"><b>{es ? `Certificados` : `Certificates`}</b></a>
+                </p>
+            
+                <p><b>{es ? `Veterinario.`: `Veterinarian.`}</b> {es ? `Master en Medio Ambiente y Desarrollo Sustentable` : `Masters in Environment and Sustainable Development`}, 2016. Universidad Mayor, Chile </p>
+              </div>
             </div>
-            {sectionHeader('Additional Skills, Experience, and Interests')}
+            <h4 className={cssClass.sectionheader}>{es ? `Otras habilidades e intereses` : `Other skills and Interests`}</h4>
             <p>
-              <i className="fas fa-comment"></i> <b>Bilingual:</b> Fluent English, Native Spanish <br/>
-              <i className="fas fa-dog"></i> <b>Veterinarian:</b> Masters in Environment and Sustainable Development. Universidad Mayor, Chile <br/>
-              <i className="fas fa-dragon"></i> <b>Hobbies:</b> Cooperative Storytelling, VideoGames, Nature
+              <i className="fas fa-comment"></i> <b>{es ? `Bilingüe:` : `Bilingual:`}</b> {es ? `Inglés fluido` : `Fluent English, Native Spanish`} <br/>
+              <i className="fas fa-dragon"></i> <b>Hobbies:</b> {es ? `Desarrollo de historias cooperativo, videojuegos, naturaleza`: `Cooperative Storytelling, VideoGames, Nature`}
             </p>
-            <p style={{fontSize: '1.5vh', alignSelf: 'center', marginBottom: '0', color: "#0b81af"}}>This CV was created using <i className="fab fa-react"></i> React</p>
+            <p style={{fontSize: '1.5vh', alignSelf: 'center', marginBottom: '0', color: "#0b81af"}}>*{es ? `Este CV fué creado usando `: `This CV was created using `} <i className="fab fa-react" style={{width: 'auto', marginRight: '0'}}></i> React</p>
         </div>
     </div>
-    <button onClick={handlePrint} className={cssClass.printbutton}><i className="fas fa-file-alt"></i> Resume in English</button>
+    <button onClick={handlePrint} className={cssClass.printbutton}><i className="fas fa-file-alt" style={{marginRight: `1vh`}}></i>{es ? `Curriculum en Español` : `Resume in English`}</button>
     </>
   )
 }
