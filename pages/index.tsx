@@ -14,8 +14,10 @@ const Home: NextPage = ({ projects, certificates }: InferGetStaticPropsType<type
   return (
     <div style={{height: '100vh'}}>
       <PhoneMenuButton/>
-      <BlurryBG/>
-      <PhoneMenu/>
+      <BlurryBG>
+        <PhoneMenu/>
+      </BlurryBG>
+      
       <div className="indexcontainer">
         <Section id="aboutMe"><AboutMe/></Section>
         <Section id="projects">

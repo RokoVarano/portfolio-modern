@@ -4,14 +4,14 @@ export const appear = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.classList.add(cssClass.adddisplay)
     setTimeout(() => {
         ref.current?.classList.add(cssClass.appear);
-    }, 500);
+    }, 300);
 }
 
 export const disappear = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.classList.remove(cssClass.appear);
     setTimeout(() => {
         ref.current?.classList.remove(cssClass.adddisplay);
-    }, 500);
+    }, 300);
   
 }
 

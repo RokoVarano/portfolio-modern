@@ -4,7 +4,11 @@ import { RootState } from '../redux/configuratestore';
 import { appear, disappear } from './tricks';
 import cssClass from './blurrybg.module.scss';
 
-const BlurryBG = () => {
+type Props = {
+    children: JSX.Element[] | JSX.Element
+}
+
+const BlurryBG = (props: Props) => {
     const blurryRef = useRef<HTMLDivElement>(null);
     const menu = useSelector((state: RootState) => state.ui.menu)
 
@@ -14,7 +18,7 @@ const BlurryBG = () => {
     }, [menu])
 
     return (
-        <div className={cssClass.blurry} ref={blurryRef}/>
+        <div className={cssClass.blurry} ref={blurryRef}>{props.children}</div>
     )
 }
 
