@@ -1,17 +1,17 @@
 import cssClass from './tricks.module.scss';
 
 export const appear = (ref: React.RefObject<HTMLElement>) => {
-    ref.current?.classList.add(cssClass.dissapear);
+    ref.current?.classList.add(cssClass.adddisplay)
     setTimeout(() => {
-        ref.current?.classList.add(cssClass.nodisplay)
+        ref.current?.classList.add(cssClass.appear);
     }, 500);
 }
 
 export const disappear = (ref: React.RefObject<HTMLElement>) => {
-    ref.current?.classList.remove(cssClass.nodisplay);
+    ref.current?.classList.remove(cssClass.appear);
     setTimeout(() => {
-        ref.current?.classList.remove(cssClass.dissapear);
-    }, 100);
+        ref.current?.classList.remove(cssClass.adddisplay);
+    }, 500);
   
 }
 

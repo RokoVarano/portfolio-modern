@@ -12,11 +12,11 @@ const PhoneMenu = () => {
     const { toggleMenu } = UISlice.actions;
 
     useEffect(()=>{
-        if (!menu) {
+        if (menu) {
             showfromLeft(menuRef);
             appear(menuRef);            
         };
-        if (menu) {
+        if (!menu) {
             hideInLeft(menuRef);
             disappear(menuRef);
         };
