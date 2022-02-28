@@ -20,6 +20,7 @@ const CV = ({ es }: Props) => {
             <div className={cssClass.header}>
               <h2 className={cssClass.title}>Rodrigo Ibaceta</h2>
               <h4 className={cssClass.subtitle}>{ es ? `Desarrollador Web Full-Stack` : `FullStack Web Developer`}</h4>
+              <h6 className={cssClass.rut}>Rut: 16.209.189-1</h6>
             </div>
             <div style={{display: 'flex', width: '100%', flexDirection: 'column'}}>
                   <p style={{display: 'flex', justifyContent: "space-between"}}>
@@ -52,7 +53,8 @@ const CV = ({ es }: Props) => {
             <div className={cssClass.skillTable}>
               <div style={{display: 'flex'}}>
                 <p className={cssClass.content}>
-                  <i className="fab fa-js"></i> JavaScript <br/>
+                  <i className="fab fa-js"></i> JavaScript<br/>
+                  <i className="fab fa-js"></i> TypeScript<br/>
                   <i className="fab fa-react"></i> React/Redux <br/>
                   <i className="fab fa-react"></i> NextJS <br/>
                 </p>
