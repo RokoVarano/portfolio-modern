@@ -40,37 +40,45 @@ const CV = ({ es }: Props) => {
                 </p>
             <h4 className={cssClass.sectionheader}>{es ? `Experiencia` : `Experience`}</h4>
             <div style={{display: 'flex', flexDirection: 'column'}}>
+            <p style={{marginBottom: `0.5vh`}}><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b></p>
+              <p style={{fontSize: `1.5vh`}}>Shipit, {es ? `Abril 2022, July 2022` : `April 2022, July 2022`}</p>
+              <p style={{marginLeft: '4vh'}}>
+                <i className="fas fa-check"></i> {es ? `Creé una nueva vista en el frontend para que el cliente personalice características`: `Created a new view in the frontend so that the client can customize product features`} <br/>
+                <i className="fas fa-check"></i> {es ? `Colaboré en varias tareas pequeñas entregadas por QA en el backend y el frontend` : `Collaborated in several small tasks reported from QA both in backend and frontend`}<br/>
+                <i className="fas fa-check"></i> {es ? `Trabajé en equipo para ayudarnos mutuamente a resolver tareas en forma dinámica` : `I worked in a team to mutually help each other with our respective tasks dynamically`}<br/>
+              </p>
               <p style={{marginBottom: `0.5vh`}}><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b></p>
               <p style={{fontSize: `1.5vh`}}>EXE.cl, {es ? `Septiembre 2018, Septiembre 2020` : `September 2018, September 2020`}</p>
               <p style={{marginLeft: '4vh'}}>
                 <i className="fas fa-check"></i> {es ? `Ayudé a crear un gestor documental para organismos del gobierno usando Java y un framework de legado, Seam`: `Helped creating a document handler for government organisms using Java and a legacy framework`} <br/>
                 <i className="fas fa-check"></i> {es ? `Recopilé datos de entrenamiento para un software de reconocimiento de imagenes` : `Gathered training data for image recognition software`}<br/>
                 <i className="fas fa-check"></i> {es ? `Desarrollé una aplicación mobil de tickets de turno que consumia datos de una API del gobierno` : `Developed a mobile turn-ticket app that fetched personal information from a government API`}<br/>
-                <i className="fas fa-check"></i> {es ? `Participé en proyectos laterales de la compañia` : `Participated in several company side-projects`}
               </p>
             </div>
-            <h4 className={cssClass.sectionheader}>{es ? `Lenguajes y FrameWorks` : `Languages and Frameworks`}</h4>
-            <div className={cssClass.skillTable}>
-              <div style={{display: 'flex'}}>
-                <p className={cssClass.content}>
-                  <i className="fab fa-js"></i> JavaScript<br/>
-                  <i className="fab fa-js"></i> TypeScript<br/>
-                  <i className="fab fa-react"></i> React/Redux <br/>
-                  <i className="fab fa-react"></i> NextJS <br/>
-                </p>
-                <p className={cssClass.content}>
-                  <i className="fab fa-python"></i> Python <br/>
-                  <i className="fas fa-gem"></i> Ruby <br/>
-                  <i className="fas fa-gem"></i> Ruby on Rails
-                </p>
-                <p className={cssClass.content}>
-                  <i className="fab fa-html5"></i> HTML <br/>
-                  <i className="fab fa-css3-alt"></i> CSS/SASS <br/>
-                  <i className="fab fa-git"></i> GIT
-                </p>
+            <div className={cssClass.pagebreak}>
+              <h4 className={cssClass.sectionheader}>{es ? `Lenguajes y FrameWorks` : `Languages and Frameworks`}</h4>
+              <div className={cssClass.skillTable}>
+                <div style={{display: 'flex'}}>
+                  <p className={cssClass.content}>
+                    <i className="fab fa-js"></i> JavaScript<br/>
+                    <i className="fab fa-js"></i> TypeScript<br/>
+                    <i className="fab fa-react"></i> React/Redux <br/>
+                    <i className="fab fa-react"></i> NextJS <br/>
+                  </p>
+                  <p className={cssClass.content}>
+                    <i className="fab fa-python"></i> Python <br/>
+                    <i className="fas fa-gem"></i> Ruby <br/>
+                    <i className="fas fa-gem"></i> Ruby on Rails
+                  </p>
+                  <p className={cssClass.content}>
+                    <i className="fab fa-html5"></i> HTML <br/>
+                    <i className="fab fa-css3-alt"></i> CSS/SASS <br/>
+                    <i className="fab fa-git"></i> GIT
+                  </p>
+                </div>
               </div>
             </div>
-            <div className={cssClass.pagebreak}>
+            <div>
               <h4 className={cssClass.sectionheader}>{es ? `Educación`: `Education`}</h4>
               <div style={{display: 'flex', flexDirection: 'column'}}>
                 <p style={{marginBottom: `0.5vh`}}>
