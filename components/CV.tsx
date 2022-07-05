@@ -41,11 +41,11 @@ const CV = ({ es }: Props) => {
             <h4 className={cssClass.sectionheader}>{es ? `Experiencia` : `Experience`}</h4>
             <div style={{display: 'flex', flexDirection: 'column'}}>
             <p style={{marginBottom: `0.5vh`}}><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b></p>
-              <p style={{fontSize: `1.5vh`}}>Shipit, {es ? `Abril 2022, July 2022` : `April 2022, July 2022`}</p>
+              <p style={{fontSize: `1.5vh`}}>Shipit, {es ? `Abril 2022, Julio 2022` : `April 2022, July 2022`}</p>
               <p style={{marginLeft: '4vh'}}>
-                <i className="fas fa-check"></i> {es ? `Creé una nueva vista en el frontend para que el cliente personalice características`: `Created a new view in the frontend so that the client can customize product features`} <br/>
-                <i className="fas fa-check"></i> {es ? `Colaboré en varias tareas pequeñas entregadas por QA en el backend y el frontend` : `Collaborated in several small tasks reported from QA both in backend and frontend`}<br/>
-                <i className="fas fa-check"></i> {es ? `Trabajé en equipo para ayudarnos mutuamente a resolver tareas en forma dinámica` : `I worked in a team to mutually help each other with our respective tasks dynamically`}<br/>
+                <i className="fas fa-check"></i> {es ? `Desarrollé nuevas vistas y funcionalidades en el frontend usando NextJs, React y Redux`:  `I developed new views and functionalities in the frontend using NextJs, React and Redux.`} <br/>
+                <i className="fas fa-check"></i> {es ? `Implementé soluciones en el backend usando Ruby on Rails, incluyendo tests usando Rspec y Capistrano`:  `Implemented solutions in the backend using Ruby on Rails, including tests using Rspec and Capistrano`} <br/>
+                <i className="fas fa-check"></i> {es ? `Analicé y diagnostiqué problemas en bases de datos usando Postgres y ActiveRecord`:  `Analized and diagnosed problems in databases using Postgres and ActiveRecord`} <br/>
               </p>
               <p style={{marginBottom: `0.5vh`}}><b>{es ? `Desarrollador de Software Junior` : `Junior Software Developer`}</b></p>
               <p style={{fontSize: `1.5vh`}}>EXE.cl, {es ? `Septiembre 2018, Septiembre 2020` : `September 2018, September 2020`}</p>
